@@ -1,0 +1,48 @@
+{
+  "name": "ms-sample-user",
+  "version": "1.0.0",
+  "description": "マイクロサービスのUserサービス",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "NODE_ENV=development nodemon ./app.js",
+    "lint": "eslint --ext .js --ignore-path .gitignore .",
+    "swagger": "swagger-jsdoc -o ./swagger/swagger.yml -d ./swagger/swaggerDef.js ./controllers/**/*.js ./swagger/components.yml",
+    "test": "ava",
+    "watch": "ava --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-sakurai816/ms-sample-user.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t-sakurai816/ms-sample-user/issues"
+  },
+  "homepage": "https://github.com/t-sakurai816/ms-sample-user#readme",
+  "devDependencies": {
+    "ava": "^5.2.0",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "husky": "^8.0.3",
+    "mongodb-memory-server": "^8.12.2",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "supertest": "^3.4.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongodb": "^4.16.0",
+    "mongoose": "^7.1.0",
+    "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.2.8"
+  }
+}
